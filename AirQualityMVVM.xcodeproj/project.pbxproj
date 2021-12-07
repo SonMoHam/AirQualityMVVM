@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,26 @@
 		5FDC8553275F4EEE0016E9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC8551275F4EEE0016E9D4 /* Main.storyboard */; };
 		5FDC8555275F4EF00016E9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC8554275F4EF00016E9D4 /* Assets.xcassets */; };
 		5FDC8558275F4EF00016E9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC8556275F4EF00016E9D4 /* LaunchScreen.storyboard */; };
+		5FDC8566275F50850016E9D4 /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8565275F50850016E9D4 /* SampleViewModel.swift */; };
+		5FDC8568275F508D0016E9D4 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8567275F508D0016E9D4 /* SampleViewController.swift */; };
+		5FDC856E275F50ED0016E9D4 /* SampleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC856D275F50ED0016E9D4 /* SampleEntity.swift */; };
+		5FDC8570275F50FB0016E9D4 /* SampleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC856F275F50FB0016E9D4 /* SampleUseCase.swift */; };
+		5FDC8573275F51260016E9D4 /* SampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8572275F51260016E9D4 /* SampleRepository.swift */; };
+		5FDC8578275F51800016E9D4 /* DefaultSampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8577275F51800016E9D4 /* DefaultSampleRepository.swift */; };
+		5FDC857D275F51B60016E9D4 /* SampleRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */; };
+		5FDC857F275F51BF0016E9D4 /* SampleResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */; };
+		5FDC8581275F51F20016E9D4 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8580275F51F20016E9D4 /* APIEndpoints.swift */; };
+		5FDC8585275F529F0016E9D4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8584275F529F0016E9D4 /* Endpoint.swift */; };
+		5FDC8587275F52A60016E9D4 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */; };
+		5FDC8589275F52AC0016E9D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8588275F52AC0016E9D4 /* NetworkService.swift */; };
+		5FDC858B275F52BC0016E9D4 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC858A275F52BC0016E9D4 /* DataTransferService.swift */; };
+		C6A33778EED42210797311A0 /* Pods_AirQualityMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16F982EBB1BAFD995D9A7CAE /* Pods-AirQualityMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMVVM.debug.xcconfig"; path = "Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		171D1CF01C9446333838F1DF /* Pods-AirQualityMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMVVM.release.xcconfig"; path = "Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDC8548275F4EEE0016E9D4 /* AirQualityMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +41,19 @@
 		5FDC8554275F4EF00016E9D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FDC8557275F4EF00016E9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FDC8559275F4EF00016E9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FDC8565275F50850016E9D4 /* SampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewModel.swift; sourceTree = "<group>"; };
+		5FDC8567275F508D0016E9D4 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		5FDC856D275F50ED0016E9D4 /* SampleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEntity.swift; sourceTree = "<group>"; };
+		5FDC856F275F50FB0016E9D4 /* SampleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUseCase.swift; sourceTree = "<group>"; };
+		5FDC8572275F51260016E9D4 /* SampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRepository.swift; sourceTree = "<group>"; };
+		5FDC8577275F51800016E9D4 /* DefaultSampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSampleRepository.swift; sourceTree = "<group>"; };
+		5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRequestDTO.swift; sourceTree = "<group>"; };
+		5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponseDTO.swift; sourceTree = "<group>"; };
+		5FDC8580275F51F20016E9D4 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		5FDC8584275F529F0016E9D4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		5FDC8588275F52AC0016E9D4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5FDC858A275F52BC0016E9D4 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A33778EED42210797311A0 /* Pods_AirQualityMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +73,8 @@
 			children = (
 				5FDC854A275F4EEE0016E9D4 /* AirQualityMVVM */,
 				5FDC8549275F4EEE0016E9D4 /* Products */,
+				77A04FD145398904CD85B8D9 /* Pods */,
+				FDB95E7F8692E5746AF960C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,181 @@
 		5FDC854A275F4EEE0016E9D4 /* AirQualityMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */,
-				5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */,
-				5FDC854F275F4EEE0016E9D4 /* ViewController.swift */,
-				5FDC8551275F4EEE0016E9D4 /* Main.storyboard */,
+				5FDC8560275F50060016E9D4 /* App */,
+				5FDC8561275F50320016E9D4 /* Presentation */,
+				5FDC8569275F509C0016E9D4 /* Domain */,
+				5FDC8574275F51490016E9D4 /* Data */,
+				5FDC8582275F52880016E9D4 /* Infrastructure */,
+				5FDC855F275F4FEB0016E9D4 /* Resources */,
+			);
+			path = AirQualityMVVM;
+			sourceTree = "<group>";
+		};
+		5FDC855F275F4FEB0016E9D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				5FDC8554275F4EF00016E9D4 /* Assets.xcassets */,
 				5FDC8556275F4EF00016E9D4 /* LaunchScreen.storyboard */,
 				5FDC8559275F4EF00016E9D4 /* Info.plist */,
 			);
-			path = AirQualityMVVM;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5FDC8560275F50060016E9D4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */,
+				5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5FDC8561275F50320016E9D4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8551275F4EEE0016E9D4 /* Main.storyboard */,
+				5FDC854F275F4EEE0016E9D4 /* ViewController.swift */,
+				5FDC8562275F50500016E9D4 /* MainScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5FDC8562275F50500016E9D4 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8564275F50720016E9D4 /* ViewModel */,
+				5FDC8563275F50670016E9D4 /* View */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		5FDC8563275F50670016E9D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8567275F508D0016E9D4 /* SampleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FDC8564275F50720016E9D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8565275F50850016E9D4 /* SampleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5FDC8569275F509C0016E9D4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC856C275F50E20016E9D4 /* Entities */,
+				5FDC856B275F50D70016E9D4 /* Interfaces */,
+				5FDC856A275F50CB0016E9D4 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5FDC856A275F50CB0016E9D4 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC856F275F50FB0016E9D4 /* SampleUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5FDC856B275F50D70016E9D4 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8571275F51160016E9D4 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		5FDC856C275F50E20016E9D4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC856D275F50ED0016E9D4 /* SampleEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5FDC8571275F51160016E9D4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8572275F51260016E9D4 /* SampleRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5FDC8574275F51490016E9D4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8576275F51690016E9D4 /* Network */,
+				5FDC8575275F51600016E9D4 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5FDC8575275F51600016E9D4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8577275F51800016E9D4 /* DefaultSampleRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5FDC8576275F51690016E9D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC857B275F51A00016E9D4 /* DataMapping */,
+				5FDC8580275F51F20016E9D4 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5FDC857B275F51A00016E9D4 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */,
+				5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		5FDC8582275F52880016E9D4 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8583275F52920016E9D4 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		5FDC8583275F52920016E9D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC8584275F529F0016E9D4 /* Endpoint.swift */,
+				5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */,
+				5FDC8588275F52AC0016E9D4 /* NetworkService.swift */,
+				5FDC858A275F52BC0016E9D4 /* DataTransferService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		77A04FD145398904CD85B8D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16F982EBB1BAFD995D9A7CAE /* Pods-AirQualityMVVM.debug.xcconfig */,
+				171D1CF01C9446333838F1DF /* Pods-AirQualityMVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FDB95E7F8692E5746AF960C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FDC855C275F4EF00016E9D4 /* Build configuration list for PBXNativeTarget "AirQualityMVVM" */;
 			buildPhases = (
+				3934FE3F527BE77E74FDA4E7 /* [CP] Check Pods Manifest.lock */,
 				5FDC8544275F4EEE0016E9D4 /* Sources */,
 				5FDC8545275F4EEE0016E9D4 /* Frameworks */,
 				5FDC8546275F4EEE0016E9D4 /* Resources */,
+				10271749A49A414F1FDD04A6 /* [CP] Embed Pods Frameworks */,
+				5D5079E3C6C356DADC9338F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +334,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10271749A49A414F1FDD04A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3934FE3F527BE77E74FDA4E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirQualityMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D5079E3C6C356DADC9338F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FDC8544275F4EEE0016E9D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDC8587275F52A60016E9D4 /* NetworkConfig.swift in Sources */,
+				5FDC8568275F508D0016E9D4 /* SampleViewController.swift in Sources */,
 				5FDC8550275F4EEE0016E9D4 /* ViewController.swift in Sources */,
+				5FDC8570275F50FB0016E9D4 /* SampleUseCase.swift in Sources */,
+				5FDC858B275F52BC0016E9D4 /* DataTransferService.swift in Sources */,
+				5FDC8585275F529F0016E9D4 /* Endpoint.swift in Sources */,
+				5FDC8581275F51F20016E9D4 /* APIEndpoints.swift in Sources */,
+				5FDC857D275F51B60016E9D4 /* SampleRequestDTO.swift in Sources */,
+				5FDC8573275F51260016E9D4 /* SampleRepository.swift in Sources */,
 				5FDC854C275F4EEE0016E9D4 /* AppDelegate.swift in Sources */,
+				5FDC8566275F50850016E9D4 /* SampleViewModel.swift in Sources */,
+				5FDC8589275F52AC0016E9D4 /* NetworkService.swift in Sources */,
+				5FDC8578275F51800016E9D4 /* DefaultSampleRepository.swift in Sources */,
+				5FDC856E275F50ED0016E9D4 /* SampleEntity.swift in Sources */,
+				5FDC857F275F51BF0016E9D4 /* SampleResponseDTO.swift in Sources */,
 				5FDC854E275F4EEE0016E9D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,12 +557,13 @@
 		};
 		5FDC855D275F4EF00016E9D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F982EBB1BAFD995D9A7CAE /* Pods-AirQualityMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G2M9BCKK9;
-				INFOPLIST_FILE = AirQualityMVVM/Info.plist;
+				INFOPLIST_FILE = AirQualityMVVM/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +577,13 @@
 		};
 		5FDC855E275F4EF00016E9D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171D1CF01C9446333838F1DF /* Pods-AirQualityMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G2M9BCKK9;
-				INFOPLIST_FILE = AirQualityMVVM/Info.plist;
+				INFOPLIST_FILE = AirQualityMVVM/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
