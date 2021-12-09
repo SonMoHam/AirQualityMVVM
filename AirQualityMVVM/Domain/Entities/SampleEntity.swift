@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Administrative {
+    let order: Int
+    let adminLevel: Int
+    let name: String
+}
