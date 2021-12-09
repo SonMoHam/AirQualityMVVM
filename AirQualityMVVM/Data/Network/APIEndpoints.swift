@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct APIEndpoints {
+    static func getTest(with sampleRequestDTO: SampleRequestDTO) -> Endpoint<SampleResponseDTO> {
+        return Endpoint(baseURL: API.REVERSE_GEOCODE.BASE_URL,
+                        path: API.REVERSE_GEOCODE.PATH,
+                        method: .get,
+                        queryParameters: sampleRequestDTO,
+                        headers: ["Content-Type": "application/json"] )
+    }
+}
