@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol SampleRepository {
+    
+    func fetchTest(latitude lat: String, longitude lng: String, completion: @escaping(_ entities: [Administrative]?) -> () )
+}
