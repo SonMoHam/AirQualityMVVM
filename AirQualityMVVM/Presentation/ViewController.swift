@@ -19,7 +19,11 @@ class ViewController: UIViewController {
         super.viewWillAppear(true)
         print("viewWillAppear")
         sampleRepository.fetchTest(latitude: "37.5099983215332", longitude: "127.01000213623047") {
-            print($0 ?? "")
+            if let administratives = $0 {
+                administratives.forEach { administrative in
+                    print(administrative)
+                }
+            }
         }
     }
 
