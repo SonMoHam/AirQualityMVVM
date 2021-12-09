@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F5035EB2761E6EA0085ECF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5035EA2761E6EA0085ECF8 /* Constants.swift */; };
 		5FDC854C275F4EEE0016E9D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */; };
 		5FDC854E275F4EEE0016E9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */; };
 		5FDC8550275F4EEE0016E9D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854F275F4EEE0016E9D4 /* ViewController.swift */; };
@@ -25,7 +26,6 @@
 		5FDC8585275F529F0016E9D4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8584275F529F0016E9D4 /* Endpoint.swift */; };
 		5FDC8587275F52A60016E9D4 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */; };
 		5FDC8589275F52AC0016E9D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8588275F52AC0016E9D4 /* NetworkService.swift */; };
-		5FDC858B275F52BC0016E9D4 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC858A275F52BC0016E9D4 /* DataTransferService.swift */; };
 		C6A33778EED42210797311A0 /* Pods_AirQualityMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +33,7 @@
 		16F982EBB1BAFD995D9A7CAE /* Pods-AirQualityMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMVVM.debug.xcconfig"; path = "Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		171D1CF01C9446333838F1DF /* Pods-AirQualityMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMVVM.release.xcconfig"; path = "Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5035EA2761E6EA0085ECF8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FDC8548275F4EEE0016E9D4 /* AirQualityMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		5FDC8584275F529F0016E9D4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		5FDC8588275F52AC0016E9D4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		5FDC858A275F52BC0016E9D4 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F5035E92761E6E20085ECF8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5F5035EA2761E6EA0085ECF8 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5FDC853F275F4EEE0016E9D4 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +97,7 @@
 		5FDC854A275F4EEE0016E9D4 /* AirQualityMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				5F5035E92761E6E20085ECF8 /* Utils */,
 				5FDC8560275F50060016E9D4 /* App */,
 				5FDC8561275F50320016E9D4 /* Presentation */,
 				5FDC8569275F509C0016E9D4 /* Domain */,
@@ -244,7 +253,6 @@
 				5FDC8584275F529F0016E9D4 /* Endpoint.swift */,
 				5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */,
 				5FDC8588275F52AC0016E9D4 /* NetworkService.swift */,
-				5FDC858A275F52BC0016E9D4 /* DataTransferService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -399,10 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDC8587275F52A60016E9D4 /* NetworkConfig.swift in Sources */,
+				5F5035EB2761E6EA0085ECF8 /* Constants.swift in Sources */,
 				5FDC8568275F508D0016E9D4 /* SampleViewController.swift in Sources */,
 				5FDC8550275F4EEE0016E9D4 /* ViewController.swift in Sources */,
 				5FDC8570275F50FB0016E9D4 /* SampleUseCase.swift in Sources */,
-				5FDC858B275F52BC0016E9D4 /* DataTransferService.swift in Sources */,
 				5FDC8585275F529F0016E9D4 /* Endpoint.swift in Sources */,
 				5FDC8581275F51F20016E9D4 /* APIEndpoints.swift in Sources */,
 				5FDC857D275F51B60016E9D4 /* SampleRequestDTO.swift in Sources */,
