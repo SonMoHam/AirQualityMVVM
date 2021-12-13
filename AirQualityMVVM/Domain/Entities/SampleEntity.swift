@@ -12,3 +12,19 @@ struct Administrative {
     let adminLevel: Int
     let name: String
 }
+
+struct Coordinates {
+    let latitude: String
+    let longitude: String
+}
+
+
+struct Location {
+    let coordinates: Coordinates
+    var info: Info? = nil
+    
+    struct Info {
+        var administratives: [Administrative]? = nil
+        var AQI: String? = nil
+    }
+}
