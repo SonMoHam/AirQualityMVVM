@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol ViewModelInput {
-    func sampleInput()
+    func sampleInput(latitude: String, longitude: String)
 }
 protocol ViewModelOutput {
-    func sampleOutput()
+    var result: PublishSubject<String> { get }
 }
 protocol ViewModel: ViewModelInput, ViewModelOutput { }
 
@@ -27,25 +28,28 @@ class DefaultViewModel: ViewModel {
     
     
     // MARK: - Output
-    func sampleOutput() {
-        
-    }
+    let result = PublishSubject<String>()
     
     
     // MARK: - Private
-    private func getAddressName(at coor: Coordinates) {
+    private func testGetAddressName(at coor: Coordinates) {
         sampleUseCase.getAdministratives(at: coor) { administratives in
+            var result: String = ""
             if administratives.count > 0 {
-                print("count > 0")
+                administratives.forEach {
+                    result = result + " " + $0.name
+                }
             } else {
-                print("none of contents")
+                result = "none of contents"
             }
+            self.result.onNext(result)
         }
     }
     
     
     // MARK: - Input, View event
-    func sampleInput() {
-        
+    func sampleInput(latitude: String, longitude: String) {
+        let coordinates: Coordinates = .init(latitude: latitude, longitude: longitude)
+        testGetAddressName(at: coordinates)
     }
 }
