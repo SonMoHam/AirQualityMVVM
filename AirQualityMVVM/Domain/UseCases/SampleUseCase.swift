@@ -24,8 +24,8 @@ class DefaultSampleUseCase: SampleUseCase {
     
     
     func getAdministratives(at: Coordinates, completion: @escaping ([Administrative]) -> ()) {
-        
-        sampleRepository.fetchTest(latitude: at.latitude, longitude: at.longitude) { administratives in
+        let sampleRequestDTO: SampleRequestDTO = .init(latitude: at.latitude, longitude: at.longitude)
+        sampleRepository.fetchTest(with: sampleRequestDTO) { administratives in
             let result: [Administrative] = administratives ?? []
             completion(result)
         }

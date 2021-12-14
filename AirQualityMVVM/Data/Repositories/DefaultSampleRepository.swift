@@ -8,9 +8,9 @@
 import Foundation
 
 class DefaultSampleRepository: SampleRepository{
-    public func fetchTest(latitude lat: String, longitude lng: String, completion: @escaping(_ entities: [Administrative]?) -> () )  {
-        let sampleRequestDTO = SampleRequestDTO(latitude: lat, longitude: lng)
-        let endpoint = APIEndpoints.getTest(with: sampleRequestDTO)
+    public func fetchTest(with requestDTO: SampleRequestDTO, completion: @escaping(_ entities: [Administrative]?) -> () )  {
+        
+        let endpoint = APIEndpoints.getTest(with: requestDTO)
         NetworkService.shared.testRequest(with: endpoint) { result in
             switch result {
             case .success(let response):

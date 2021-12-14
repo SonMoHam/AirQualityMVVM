@@ -9,5 +9,5 @@ import Foundation
 
 protocol SampleRepository {
     
-    func fetchTest(latitude lat: String, longitude lng: String, completion: @escaping(_ entities: [Administrative]?) -> () )
+    func fetchTest(with requestDTO: SampleRequestDTO, completion: @escaping(_ entities: [Administrative]?) -> () )
 }
