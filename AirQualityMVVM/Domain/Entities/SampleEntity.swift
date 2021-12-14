@@ -19,12 +19,8 @@ struct Coordinates {
 }
 
 
-struct Location {
+struct LocationInfo {
     let coordinates: Coordinates
-    var info: Info? = nil
-    
-    struct Info {
-        var administratives: [Administrative]? = nil
-        var AQI: String? = nil
-    }
+    var name: String? = nil
+    var AQI: String? = nil
 }
