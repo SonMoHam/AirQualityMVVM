@@ -15,4 +15,11 @@ struct APIEndpoints {
                         queryParameters: sampleRequestDTO,
                         headers: ["Content-Type": "application/json"] )
     }
+    
+    static func getAQI(with aqiRequestDTO: AqiRequestDTO) -> Endpoint<AqiResponseDTO> {
+        return Endpoint(baseURL: API.AIR_QUALITY_INDEX.BASE_URL,
+                        path: API.AIR_QUALITY_INDEX.PATH + ":lat;long/?token=\(API.AIR_QUALITY_INDEX.TOKEN)",
+                        method: .get,
+                        headers: ["Content-Type": "application/json"])
+    }
 }
