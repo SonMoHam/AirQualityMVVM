@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5F5035EB2761E6EA0085ECF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5035EA2761E6EA0085ECF8 /* Constants.swift */; };
 		5FD297F7276743EB00ABC4AE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD297F6276743EB00ABC4AE /* ViewModel.swift */; };
+		5FD297FD2769E7E600ABC4AE /* AqiRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD297FC2769E7E600ABC4AE /* AqiRequestDTO.swift */; };
+		5FD297FF2769E7F000ABC4AE /* AqiResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD297FE2769E7F000ABC4AE /* AqiResponseDTO.swift */; };
 		5FDC854C275F4EEE0016E9D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */; };
 		5FDC854E275F4EEE0016E9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */; };
 		5FDC8550275F4EEE0016E9D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854F275F4EEE0016E9D4 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5035EA2761E6EA0085ECF8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FD297F6276743EB00ABC4AE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5FD297FC2769E7E600ABC4AE /* AqiRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiRequestDTO.swift; sourceTree = "<group>"; };
+		5FD297FE2769E7F000ABC4AE /* AqiResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiResponseDTO.swift; sourceTree = "<group>"; };
 		5FDC8548275F4EEE0016E9D4 /* AirQualityMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 			children = (
 				5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */,
 				5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */,
+				5FD297FC2769E7E600ABC4AE /* AqiRequestDTO.swift */,
+				5FD297FE2769E7F000ABC4AE /* AqiResponseDTO.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -426,6 +432,8 @@
 				5FDC856E275F50ED0016E9D4 /* SampleEntity.swift in Sources */,
 				5FDC857F275F51BF0016E9D4 /* SampleResponseDTO.swift in Sources */,
 				5FDC854E275F4EEE0016E9D4 /* SceneDelegate.swift in Sources */,
+				5FD297FD2769E7E600ABC4AE /* AqiRequestDTO.swift in Sources */,
+				5FD297FF2769E7F000ABC4AE /* AqiResponseDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

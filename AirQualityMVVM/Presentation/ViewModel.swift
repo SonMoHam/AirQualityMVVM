@@ -16,23 +16,19 @@ protocol ViewModelOutput {
 }
 protocol ViewModel: ViewModelInput, ViewModelOutput { }
 
-class DefaultViewModel: ViewModel {
+final class DefaultViewModel: ViewModel {
 
     
     private let sampleUseCase: SampleUseCase
+    private let address = PublishSubject<String>()
+    private let aqi = PublishSubject<String>()
     
     init(sampleUseCase: SampleUseCase) {
         self.sampleUseCase = sampleUseCase
     }
     
-    
-    
-    // MARK: - Output
-    let result = PublishSubject<String>()
-    
-    
     // MARK: - Private
-    private func testGetAddressName(at coor: Coordinates) {
+    private func fetchAddressName(at coor: Coordinates) {
         sampleUseCase.getAdministratives(at: coor) { administratives in
             var result: String = ""
             if administratives.count > 0 {
@@ -46,10 +42,24 @@ class DefaultViewModel: ViewModel {
         }
     }
     
+    private func fetchAirQualityIndex(at coor: Coordinates) {
+        sampleUseCase.getAirQualityIndex(at: coor) {
+            print($0)
+        }
+    }
+    
+    private func fetchLocationInfo(at coor: Coordinates) {
+        fetchAddressName(at: coor)
+        fetchAirQualityIndex(at: coor)
+    }
+    
+    // MARK: - Output
+    let result = PublishSubject<String>()
+    
     
     // MARK: - Input, View event
     func sampleInput(latitude: String, longitude: String) {
         let coordinates: Coordinates = .init(latitude: latitude, longitude: longitude)
-        testGetAddressName(at: coordinates)
+        fetchLocationInfo(at: coordinates)
     }
 }
