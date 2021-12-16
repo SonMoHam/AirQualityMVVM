@@ -10,7 +10,19 @@ import RxSwift
 
 class ViewController: UIViewController {
 
-
+    struct A {
+        let name: String
+        let id: Int
+    }
+    struct B {
+        let name: String
+        let id: Int
+    }
+    struct C {
+        let name: String
+        let idA: Int
+        let idB: Int
+    }
     private var sampleViewModel: ViewModel!
     private let disposeBag = DisposeBag()
     
@@ -20,14 +32,35 @@ class ViewController: UIViewController {
         sampleViewModel = makeSampleViewModel()
         bind(to: sampleViewModel)
         print("viewDidLoad")
+        
+        let a = PublishSubject<A>()
+        let b = PublishSubject<B>()
+        
+        let observable = Observable.zip(a, b) { first, second -> C in
+            return .init(name: "\(first.name) \(second.name)", idA: first.id, idB: second.id)
+        }
+        
+        observable
+//            .filter { $0.idA == $0.idB }
+            .subscribe(onNext: {
+                print($0)
+        }).disposed(by: disposeBag)
+        
+        
+        a.onNext(.init(name: "a_first", id: 1))
+        b.onNext(.init(name: "b_first", id: 1))
+        a.onNext(.init(name: "a_second", id: 2))
+        a.onNext(.init(name: "a_third", id: 3))
+        b.onNext(.init(name: "b_second", id: 2))
+        b.onNext(.init(name: "b_third", id: 3))
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         print("viewWillAppear")
-        sampleViewModel.sampleInput(latitude: "37.5099983215332", longitude: "127.01000213623047")
-        sampleViewModel.sampleInput(latitude: "0", longitude: "0")
+//        sampleViewModel.sampleInput(latitude: "37.5099983215332", longitude: "127.01000213623047")
+//        sampleViewModel.sampleInput(latitude: "0", longitude: "0")
     }
     
     // MARK: - private methods
