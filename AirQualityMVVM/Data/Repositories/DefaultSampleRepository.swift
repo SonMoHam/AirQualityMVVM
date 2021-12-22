@@ -21,4 +21,18 @@ class DefaultSampleRepository: SampleRepository{
             }
         }
     }
+    
+    public func fetchAirQualityIndex(with requestDTO: AqiRequestDTO, completion: @escaping (String) -> ()) {
+        let endpoint = APIEndpoints.getAQI(with: requestDTO)
+        NetworkService.shared.testRequest(with: endpoint) { result in
+            print(result)
+            switch result {
+            case .success(let response):
+                completion(response.toDomain())
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
 }

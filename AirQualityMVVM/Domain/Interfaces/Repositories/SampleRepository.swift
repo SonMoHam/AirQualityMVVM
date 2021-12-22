@@ -10,4 +10,5 @@ import Foundation
 protocol SampleRepository {
     
     func fetchTest(with requestDTO: SampleRequestDTO, completion: @escaping(_ entities: [Administrative]?) -> () )
+    func fetchAirQualityIndex(with requestDTO: AqiRequestDTO, completion: @escaping(_ aqi: String) -> () )
 }
