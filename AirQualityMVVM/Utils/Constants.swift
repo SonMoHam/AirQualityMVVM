@@ -14,8 +14,11 @@ enum API {
     }
     
     enum AIR_QUALITY_INDEX {
-        static let BASE_URL = "https://api.waqi.info"
-        static let PATH = "/feed/geo"
-        static let TOKEN = "809ef3190596db15041a647ed0db24c5deb874e3"
+        static let BASE_URL = "https://api.airvisual.com"
+        static let TOKEN = "7fe4d2b6-8ead-470e-9a8d-79c5119a3c63"
+        enum PATH {
+            static let NEAREST_CITY = "/v2/nearest_city"
+            static let NEAREST_STATION = "/v2/nearest_station"
+        }
     }
 }
