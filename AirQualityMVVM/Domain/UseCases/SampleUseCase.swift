@@ -32,6 +32,10 @@ class DefaultSampleUseCase: SampleUseCase {
     }
     
     func getAirQualityIndex(at: Coordinates, completion: @escaping (String) -> ()) {
-        //
+        let aqiRequestDTO: AqiRequestDTO = .init(latitude: at.latitude, longitude: at.longitude)
+        sampleRepository.fetchAirQualityIndex(with: aqiRequestDTO) { aqi in
+            print(aqi)
+            completion(aqi)
+        }
     }
 }
