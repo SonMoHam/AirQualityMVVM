@@ -16,11 +16,12 @@ struct APIEndpoints {
                         queryParameters: sampleRequestDTO,
                         headers: headers)
     }
-    
+    // http://api.airvisual.com/v2/nearest_city?lat={{LATITUDE}}&lon={{LONGITUDE}}&key={{YOUR_API_KEY}}
     static func getAQI(with aqiRequestDTO: AqiRequestDTO) -> Endpoint<AqiResponseDTO> {
         return Endpoint(baseURL: API.AIR_QUALITY_INDEX.BASE_URL,
-                        path: API.AIR_QUALITY_INDEX.PATH + ":\("latitude");\("longitude")/?token=\(API.AIR_QUALITY_INDEX.TOKEN)",
+                        path: API.AIR_QUALITY_INDEX.PATH.NEAREST_CITY,
                         method: .get,
+                        queryParameters: aqiRequestDTO,
                         headers: headers)
     }
 }
