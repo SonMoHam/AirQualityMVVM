@@ -25,52 +25,55 @@ class ViewController: UIViewController {
     }
     private var sampleViewModel: ViewModel!
     private let disposeBag = DisposeBag()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sampleViewModel = makeSampleViewModel()
         bind(to: sampleViewModel)
-        print("viewDidLoad")
         
-        let a = PublishSubject<A>()
-        let b = PublishSubject<B>()
+        let fetchButton = UIButton()
         
-        let observable = Observable.zip(a, b) { first, second -> C in
-            return .init(name: "\(first.name) \(second.name)", idA: first.id, idB: second.id)
-        }
+        self.view.addSubview(fetchButton)
         
-        observable
-//            .filter { $0.idA == $0.idB }
-            .subscribe(onNext: {
-                print($0)
-        }).disposed(by: disposeBag)
-        
-        
-        a.onNext(.init(name: "a_first", id: 1))
-        b.onNext(.init(name: "b_first", id: 1))
-        a.onNext(.init(name: "a_second", id: 2))
-        a.onNext(.init(name: "a_third", id: 3))
-        b.onNext(.init(name: "b_second", id: 2))
-        b.onNext(.init(name: "b_third", id: 3))
+        fetchButton.translatesAutoresizingMaskIntoConstraints = false
+        fetchButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        fetchButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
+        fetchButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        fetchButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+         
+        fetchButton.setTitle("fetch", for: .normal)
+        fetchButton.setTitleColor(.black, for: .normal)
+        fetchButton.backgroundColor = .orange
+        fetchButton.addTarget(self, action: #selector(onFetchButtonClicked), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         print("viewWillAppear")
-//        sampleViewModel.sampleInput(latitude: "37.5099983215332", longitude: "127.01000213623047")
+        
 //        sampleViewModel.sampleInput(latitude: "0", longitude: "0")
     }
     
     // MARK: - private methods
     
     private func bind(to viewModel: ViewModel){
-        viewModel.result.subscribe(onNext: {
-            print($0)
+        viewModel.address.subscribe(onNext: {
+            print("adress: \($0)")
+        }).disposed(by: disposeBag)
+        
+        viewModel.aqi.subscribe(onNext: {
+            print("aqi: \($0)")
         }).disposed(by: disposeBag)
     }
     
+    @objc
+    func onFetchButtonClicked() {
+        sampleViewModel.sampleInput(latitude: "37.2099983215332", longitude: "127.01000213623047")
+//        sampleViewModel.sampleInput(latitude: "35.5099983215332", longitude: "119.01000213623047")
+    }
     // MARK: - factory methods, 이동 예정
     
     private func makeSampleViewModel() -> ViewModel {
