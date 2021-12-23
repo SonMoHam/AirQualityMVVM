@@ -12,7 +12,8 @@ protocol ViewModelInput {
     func sampleInput(latitude: String, longitude: String)
 }
 protocol ViewModelOutput {
-    var result: PublishSubject<String> { get }
+    var address: PublishSubject<String> { get }
+    var aqi: PublishSubject<String> { get }
 }
 protocol ViewModel: ViewModelInput, ViewModelOutput { }
 
@@ -20,8 +21,7 @@ final class DefaultViewModel: ViewModel {
 
     
     private let sampleUseCase: SampleUseCase
-    private let address = PublishSubject<String>()
-    private let aqi = PublishSubject<String>()
+    
     
     init(sampleUseCase: SampleUseCase) {
         self.sampleUseCase = sampleUseCase
@@ -38,13 +38,14 @@ final class DefaultViewModel: ViewModel {
             } else {
                 result = "none of contents"
             }
-            self.result.onNext(result)
+            self.address.onNext(result)
+
         }
     }
     
     private func fetchAirQualityIndex(at coor: Coordinates) {
         sampleUseCase.getAirQualityIndex(at: coor) {
-            print($0)
+            self.aqi.onNext($0)
         }
     }
     
@@ -54,8 +55,9 @@ final class DefaultViewModel: ViewModel {
     }
     
     // MARK: - Output
-    let result = PublishSubject<String>()
     
+    let address = PublishSubject<String>()
+    let aqi = PublishSubject<String>()
     
     // MARK: - Input, View event
     func sampleInput(latitude: String, longitude: String) {
