@@ -8,12 +8,12 @@
 import Foundation
 
 struct AqiRequestDTO: Encodable {
-    let latitude: String
-    let longitude: String
+    let lat: String
+    let lon: String
     let key: String
     init(latitude lat: String, longitude lng: String) {
-        self.latitude = lat
-        self.longitude = lng
+        self.lat = lat
+        self.lon = lng
         self.key = API.AIR_QUALITY_INDEX.TOKEN
     }
 }
