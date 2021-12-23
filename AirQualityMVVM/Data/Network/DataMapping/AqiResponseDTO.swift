@@ -14,6 +14,7 @@ struct AqiResponseDTO: Decodable {
 struct AqiData: Decodable {
     let city: String
     let country: String
+    let state: String
     let current: Current
 }
 
