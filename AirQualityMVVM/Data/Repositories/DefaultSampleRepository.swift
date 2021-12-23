@@ -28,7 +28,7 @@ class DefaultSampleRepository: SampleRepository{
             print(result)
             switch result {
             case .success(let response):
-                completion(response.toDomain())
+                completion(response.toString())
             case .failure(let error):
                 print(error)
             }
