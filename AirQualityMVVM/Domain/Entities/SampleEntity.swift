@@ -23,4 +23,10 @@ struct LocationInfo {
     let coordinates: Coordinates
     var name: String? = nil
     var AQI: String? = nil
+    
+    init(at coor: Coordinates, name: String? = nil, AQI: String? = nil) {
+        self.coordinates = coor
+        self.name = name
+        self.AQI = AQI
+    }
 }
