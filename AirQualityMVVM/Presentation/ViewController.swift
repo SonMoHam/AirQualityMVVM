@@ -9,44 +9,26 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
-
-    struct A {
-        let name: String
-        let id: Int
-    }
-    struct B {
-        let name: String
-        let id: Int
-    }
-    struct C {
-        let name: String
-        let idA: Int
-        let idB: Int
-    }
     private var sampleViewModel: ViewModel!
     private let disposeBag = DisposeBag()
 
+    // MARK: - LifeCycle
+    
+    static func create(with viewModel: ViewModel) -> ViewController {
+        let filename = ""
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        guard let view = storyboard.instantiateViewController(withIdentifier: filename) as? Self else {
+            fatalError("\(filename) ViewController 생성 실패")
+        }
+        return view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sampleViewModel = makeSampleViewModel()
         bind(to: sampleViewModel)
-        
-        let fetchButton = UIButton()
-        
-        self.view.addSubview(fetchButton)
-        
-        fetchButton.translatesAutoresizingMaskIntoConstraints = false
-        fetchButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        fetchButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
-        fetchButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        fetchButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-         
-        fetchButton.setTitle("fetch", for: .normal)
-        fetchButton.setTitleColor(.black, for: .normal)
-        fetchButton.backgroundColor = .orange
-        fetchButton.addTarget(self, action: #selector(onFetchButtonClicked), for: .touchUpInside)
+
         // Do any additional setup after loading the view.
     }
     
@@ -61,12 +43,29 @@ class ViewController: UIViewController {
     
     private func bind(to viewModel: ViewModel){
         viewModel.address.subscribe(onNext: {
-            print("adress: \($0)")
+            print("\nadress: \($0)")
         }).disposed(by: disposeBag)
         
         viewModel.aqi.subscribe(onNext: {
             print("aqi: \($0)")
         }).disposed(by: disposeBag)
+    }
+    
+    private func initFetchButton(){
+        let fetchButton = UIButton()
+        
+        self.view.addSubview(fetchButton)
+        
+        fetchButton.translatesAutoresizingMaskIntoConstraints = false
+        fetchButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        fetchButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
+        fetchButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        fetchButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+         
+        fetchButton.setTitle("fetch", for: .normal)
+        fetchButton.setTitleColor(.black, for: .normal)
+        fetchButton.backgroundColor = .orange
+        fetchButton.addTarget(self, action: #selector(onFetchButtonClicked), for: .touchUpInside)
     }
     
     @objc
