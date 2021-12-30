@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F249286277D9E9600470B83 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F249285277D9E9600470B83 /* SampleViewController.xib */; };
 		5F5035EB2761E6EA0085ECF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5035EA2761E6EA0085ECF8 /* Constants.swift */; };
 		5FD297F7276743EB00ABC4AE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD297F6276743EB00ABC4AE /* ViewModel.swift */; };
 		5FD297FD2769E7E600ABC4AE /* AqiRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD297FC2769E7E600ABC4AE /* AqiRequestDTO.swift */; };
@@ -14,7 +15,6 @@
 		5FDC854C275F4EEE0016E9D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */; };
 		5FDC854E275F4EEE0016E9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */; };
 		5FDC8550275F4EEE0016E9D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC854F275F4EEE0016E9D4 /* ViewController.swift */; };
-		5FDC8553275F4EEE0016E9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC8551275F4EEE0016E9D4 /* Main.storyboard */; };
 		5FDC8555275F4EF00016E9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC8554275F4EF00016E9D4 /* Assets.xcassets */; };
 		5FDC8558275F4EF00016E9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC8556275F4EF00016E9D4 /* LaunchScreen.storyboard */; };
 		5FDC8566275F50850016E9D4 /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8565275F50850016E9D4 /* SampleViewModel.swift */; };
@@ -36,6 +36,7 @@
 		16F982EBB1BAFD995D9A7CAE /* Pods-AirQualityMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMVVM.debug.xcconfig"; path = "Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		171D1CF01C9446333838F1DF /* Pods-AirQualityMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMVVM.release.xcconfig"; path = "Target Support Files/Pods-AirQualityMVVM/Pods-AirQualityMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F249285277D9E9600470B83 /* SampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
 		5F5035EA2761E6EA0085ECF8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FD297F6276743EB00ABC4AE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5FD297FC2769E7E600ABC4AE /* AqiRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiRequestDTO.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		5FDC854B275F4EEE0016E9D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FDC854D275F4EEE0016E9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5FDC854F275F4EEE0016E9D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5FDC8552275F4EEE0016E9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FDC8554275F4EF00016E9D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FDC8557275F4EF00016E9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FDC8559275F4EF00016E9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,7 +136,6 @@
 		5FDC8561275F50320016E9D4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5FDC8551275F4EEE0016E9D4 /* Main.storyboard */,
 				5FDC854F275F4EEE0016E9D4 /* ViewController.swift */,
 				5FD297F6276743EB00ABC4AE /* ViewModel.swift */,
 				5FDC8562275F50500016E9D4 /* MainScene */,
@@ -157,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDC8567275F508D0016E9D4 /* SampleViewController.swift */,
+				5F249285277D9E9600470B83 /* SampleViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,8 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDC8558275F4EF00016E9D4 /* LaunchScreen.storyboard in Resources */,
+				5F249286277D9E9600470B83 /* SampleViewController.xib in Resources */,
 				5FDC8555275F4EF00016E9D4 /* Assets.xcassets in Resources */,
-				5FDC8553275F4EEE0016E9D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,14 +440,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5FDC8551275F4EEE0016E9D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5FDC8552275F4EEE0016E9D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5FDC8556275F4EF00016E9D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
