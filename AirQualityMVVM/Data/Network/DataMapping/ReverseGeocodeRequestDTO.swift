@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SampleRequestDTO: Encodable {
+struct ReverseGeocodeRequestDTO: Encodable {
     let latitude: String
     let longitude: String
     let localityLanguage: String

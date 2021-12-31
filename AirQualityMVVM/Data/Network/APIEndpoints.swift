@@ -9,7 +9,7 @@ import Foundation
 
 struct APIEndpoints {
     static private let headers = ["Content-Type": "application/json"]
-    static func getTest(with sampleRequestDTO: SampleRequestDTO) -> Endpoint<SampleResponseDTO> {
+    static func getReverseGeocode(with sampleRequestDTO: ReverseGeocodeRequestDTO) -> Endpoint<ReverseGeocodeResponseDTO> {
         return Endpoint(baseURL: API.REVERSE_GEOCODE.BASE_URL,
                         path: API.REVERSE_GEOCODE.PATH,
                         method: .get,
@@ -17,7 +17,7 @@ struct APIEndpoints {
                         headers: headers)
     }
     // http://api.airvisual.com/v2/nearest_city?lat={{LATITUDE}}&lon={{LONGITUDE}}&key={{YOUR_API_KEY}}
-    static func getAQI(with aqiRequestDTO: AqiRequestDTO) -> Endpoint<AqiResponseDTO> {
+    static func getNearestCityAQI(with aqiRequestDTO: AqiRequestDTO) -> Endpoint<AqiResponseDTO> {
         return Endpoint(baseURL: API.AIR_QUALITY_INDEX.BASE_URL,
                         path: API.AIR_QUALITY_INDEX.PATH.NEAREST_CITY,
                         method: .get,

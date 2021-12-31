@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SampleResponseDTO: Decodable {
+struct ReverseGeocodeResponseDTO: Decodable {
     let localityInfo: LocalityInfoDTO
     
     struct LocalityInfoDTO: Decodable {
@@ -21,7 +21,7 @@ struct SampleResponseDTO: Decodable {
     }
 }
 
-extension SampleResponseDTO {
+extension ReverseGeocodeResponseDTO {
     func toDomain() -> [Administrative] {
         var result: [Administrative] = []
         localityInfo.administrative.forEach { dto in

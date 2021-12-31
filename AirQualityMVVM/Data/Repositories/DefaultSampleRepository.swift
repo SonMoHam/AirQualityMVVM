@@ -8,9 +8,8 @@
 import Foundation
 
 class DefaultSampleRepository: SampleRepository{
-    public func fetchTest(with requestDTO: SampleRequestDTO, completion: @escaping(_ entities: [Administrative]?) -> () )  {
-        
-        let endpoint = APIEndpoints.getTest(with: requestDTO)
+    public func fetchAdministratives(with requestDTO: ReverseGeocodeRequestDTO, completion: @escaping(_ entities: [Administrative]?) -> () )  {
+        let endpoint = APIEndpoints.getReverseGeocode(with: requestDTO)
         NetworkService.shared.testRequest(with: endpoint) { result in
             switch result {
             case .success(let response):
@@ -23,7 +22,7 @@ class DefaultSampleRepository: SampleRepository{
     }
     
     public func fetchAirQualityIndex(with requestDTO: AqiRequestDTO, completion: @escaping (String) -> ()) {
-        let endpoint = APIEndpoints.getAQI(with: requestDTO)
+        let endpoint = APIEndpoints.getNearestCityAQI(with: requestDTO)
         NetworkService.shared.testRequest(with: endpoint) { result in
             print(result)
             switch result {
