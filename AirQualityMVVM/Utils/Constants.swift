@@ -21,4 +21,5 @@ enum API {
             static let NEAREST_STATION = "/v2/nearest_station"
         }
     }
+    static let GMS_APIKEY = "AIzaSyCLVgcl4lkR5cgk36vs65QZzhi7qxzxTOw"
 }
