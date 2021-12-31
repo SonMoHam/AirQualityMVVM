@@ -21,11 +21,10 @@
 		5FDC8570275F50FB0016E9D4 /* SampleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC856F275F50FB0016E9D4 /* SampleUseCase.swift */; };
 		5FDC8573275F51260016E9D4 /* SampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8572275F51260016E9D4 /* SampleRepository.swift */; };
 		5FDC8578275F51800016E9D4 /* DefaultSampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8577275F51800016E9D4 /* DefaultSampleRepository.swift */; };
-		5FDC857D275F51B60016E9D4 /* SampleRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */; };
-		5FDC857F275F51BF0016E9D4 /* SampleResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */; };
+		5FDC857D275F51B60016E9D4 /* ReverseGeocodeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC857C275F51B60016E9D4 /* ReverseGeocodeRequestDTO.swift */; };
+		5FDC857F275F51BF0016E9D4 /* ReverseGeocodeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC857E275F51BF0016E9D4 /* ReverseGeocodeResponseDTO.swift */; };
 		5FDC8581275F51F20016E9D4 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8580275F51F20016E9D4 /* APIEndpoints.swift */; };
 		5FDC8585275F529F0016E9D4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8584275F529F0016E9D4 /* Endpoint.swift */; };
-		5FDC8587275F52A60016E9D4 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */; };
 		5FDC8589275F52AC0016E9D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC8588275F52AC0016E9D4 /* NetworkService.swift */; };
 		C6A33778EED42210797311A0 /* Pods_AirQualityMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857E8A068FC4250D2A8F927 /* Pods_AirQualityMVVM.framework */; };
 /* End PBXBuildFile section */
@@ -50,11 +49,10 @@
 		5FDC856F275F50FB0016E9D4 /* SampleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUseCase.swift; sourceTree = "<group>"; };
 		5FDC8572275F51260016E9D4 /* SampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRepository.swift; sourceTree = "<group>"; };
 		5FDC8577275F51800016E9D4 /* DefaultSampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSampleRepository.swift; sourceTree = "<group>"; };
-		5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRequestDTO.swift; sourceTree = "<group>"; };
-		5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponseDTO.swift; sourceTree = "<group>"; };
+		5FDC857C275F51B60016E9D4 /* ReverseGeocodeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeRequestDTO.swift; sourceTree = "<group>"; };
+		5FDC857E275F51BF0016E9D4 /* ReverseGeocodeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeResponseDTO.swift; sourceTree = "<group>"; };
 		5FDC8580275F51F20016E9D4 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		5FDC8584275F529F0016E9D4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		5FDC8588275F52AC0016E9D4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,8 +138,8 @@
 		5FDC8562275F50500016E9D4 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
-				5FDC8564275F50720016E9D4 /* ViewModel */,
 				5FDC8563275F50670016E9D4 /* View */,
+				5FDC8564275F50720016E9D4 /* ViewModel */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -167,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				5FDC856C275F50E20016E9D4 /* Entities */,
-				5FDC856B275F50D70016E9D4 /* Interfaces */,
 				5FDC856A275F50CB0016E9D4 /* UseCases */,
+				5FDC856B275F50D70016E9D4 /* Interfaces */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -234,8 +232,8 @@
 		5FDC857B275F51A00016E9D4 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
-				5FDC857C275F51B60016E9D4 /* SampleRequestDTO.swift */,
-				5FDC857E275F51BF0016E9D4 /* SampleResponseDTO.swift */,
+				5FDC857C275F51B60016E9D4 /* ReverseGeocodeRequestDTO.swift */,
+				5FDC857E275F51BF0016E9D4 /* ReverseGeocodeResponseDTO.swift */,
 				5FD297FC2769E7E600ABC4AE /* AqiRequestDTO.swift */,
 				5FD297FE2769E7F000ABC4AE /* AqiResponseDTO.swift */,
 			);
@@ -254,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				5FDC8584275F529F0016E9D4 /* Endpoint.swift */,
-				5FDC8586275F52A60016E9D4 /* NetworkConfig.swift */,
 				5FDC8588275F52AC0016E9D4 /* NetworkService.swift */,
 			);
 			path = Network;
@@ -409,20 +406,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDC8587275F52A60016E9D4 /* NetworkConfig.swift in Sources */,
 				5F5035EB2761E6EA0085ECF8 /* Constants.swift in Sources */,
 				5FDC8568275F508D0016E9D4 /* SampleViewController.swift in Sources */,
 				5FDC8570275F50FB0016E9D4 /* SampleUseCase.swift in Sources */,
 				5FDC8585275F529F0016E9D4 /* Endpoint.swift in Sources */,
 				5FD297F7276743EB00ABC4AE /* ViewModel.swift in Sources */,
 				5FDC8581275F51F20016E9D4 /* APIEndpoints.swift in Sources */,
-				5FDC857D275F51B60016E9D4 /* SampleRequestDTO.swift in Sources */,
+				5FDC857D275F51B60016E9D4 /* ReverseGeocodeRequestDTO.swift in Sources */,
 				5FDC8573275F51260016E9D4 /* SampleRepository.swift in Sources */,
 				5FDC854C275F4EEE0016E9D4 /* AppDelegate.swift in Sources */,
 				5FDC8589275F52AC0016E9D4 /* NetworkService.swift in Sources */,
 				5FDC8578275F51800016E9D4 /* DefaultSampleRepository.swift in Sources */,
 				5FDC856E275F50ED0016E9D4 /* SampleEntity.swift in Sources */,
-				5FDC857F275F51BF0016E9D4 /* SampleResponseDTO.swift in Sources */,
+				5FDC857F275F51BF0016E9D4 /* ReverseGeocodeResponseDTO.swift in Sources */,
 				5FDC854E275F4EEE0016E9D4 /* SceneDelegate.swift in Sources */,
 				5FD297FD2769E7E600ABC4AE /* AqiRequestDTO.swift in Sources */,
 				5FD297FF2769E7F000ABC4AE /* AqiResponseDTO.swift in Sources */,
