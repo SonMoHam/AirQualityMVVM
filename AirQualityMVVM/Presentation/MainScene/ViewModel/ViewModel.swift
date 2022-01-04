@@ -29,7 +29,7 @@ final class DefaultViewModel: ViewModel {
     
     // MARK: - Private
     private func fetchAddressName(at coor: Coordinates) {
-        sampleUseCase.getAdministratives(at: coor) { administratives in
+        sampleUseCase.getAdministratives(at: coor) { [weak self] administratives in
             var result: String = ""
             if administratives.count > 0 {
                 administratives.forEach {
@@ -38,14 +38,14 @@ final class DefaultViewModel: ViewModel {
             } else {
                 result = "none of contents"
             }
-            self.address.onNext(result)
+            self?.address.onNext(result)
 
         }
     }
     
     private func fetchAirQualityIndex(at coor: Coordinates) {
-        sampleUseCase.getAirQualityIndex(at: coor) {
-            self.aqi.onNext($0)
+        sampleUseCase.getAirQualityIndex(at: coor) { [weak self] in
+            self?.aqi.onNext($0)
         }
     }
     
