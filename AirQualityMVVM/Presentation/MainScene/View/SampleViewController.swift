@@ -60,11 +60,6 @@ class SampleViewController: UIViewController {
     
     // MARK: - private methods
     
-    @objc
-    func onFetchButtonClicked() {
-        sampleViewModel.sampleInput(latitude: "37.2099983215332", longitude: "127.01000213623047")
-    }
-    
     private func bind(to viewModel: ViewModel){
         viewModel.address.subscribe(onNext: { [weak self] in
             print("\nadress: \($0)")
@@ -76,25 +71,7 @@ class SampleViewController: UIViewController {
             self?.mapMarker.snippet = $0
         }).disposed(by: disposeBag)
     }
-    
-    private func initFetchButton(){
-        let fetchButton = UIButton()
-        
-        self.view.addSubview(fetchButton)
-        
-        fetchButton.translatesAutoresizingMaskIntoConstraints = false
-        fetchButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        fetchButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
-        fetchButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        fetchButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        fetchButton.setTitle("fetch", for: .normal)
-        fetchButton.setTitleColor(.black, for: .normal)
-        fetchButton.backgroundColor = .orange
-        fetchButton.addTarget(self, action: #selector(onFetchButtonClicked), for: .touchUpInside)
-    }
-    
-    
+
     private func configLocationManager() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -105,7 +82,6 @@ class SampleViewController: UIViewController {
         // 위치 업데이트
         locationManager.startUpdatingLocation()
         // 현재 위치 가져오기
-
     }
     
     private func initMapView(latitude: Double, longitude: Double) {
